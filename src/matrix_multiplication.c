@@ -7,6 +7,7 @@ void enterMatrix(int *M, int Mrows, int Mcolumns);
 void multiplyMatrices();
 void displayResult();
 void display(int *M, int Mrows, int Mcolumns);
+void cleanMemory();
 
 int *A, *B, *C;
 int Arows, Acolumns, Brows, Bcolumns;
@@ -15,6 +16,7 @@ int main() {
     enterData();
     multiplyMatrices();
     displayResult();
+    cleanMemory();
 
     return 0;
 }
@@ -80,4 +82,10 @@ void display(int *M, int Mrows, int Mcolumns)
 			printf("%2d ", *(M + row * Mcolumns + column));
         printf("\n");
 	}
+}
+
+void cleanMemory() {
+    free(A);
+    free(B);
+    free(C);
 }
