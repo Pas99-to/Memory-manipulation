@@ -64,7 +64,7 @@ void multiplyMatrices()
 }
 
 void displayResult() {
-    printf("Matriz A\n");
+    printf("\nMatriz A\n");
     display(A, Arows, Acolumns);
     printf("Matriz B\n");
     display(B, Brows, Bcolumns);
