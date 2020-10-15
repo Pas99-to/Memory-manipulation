@@ -29,7 +29,7 @@ void enterData() {
 
     A = initializeMatrix(Arows, Acolumns);
     B = initializeMatrix(Brows, Bcolumns);
-    C = initializeMatrix(Acolumns, Brows);
+    C = initializeMatrix(Arows, Bcolumns);
 
 	printf("\nIngrese los elementos de A\n");
     enterMatrix(A, Arows, Acolumns);
@@ -69,7 +69,7 @@ void displayResult() {
     printf("Matriz B\n");
     display(B, Brows, Bcolumns);
     printf("Matriz C (Resultado)\n");
-    display(C, Acolumns, Brows);
+    display(C, Arows, Bcolumns);
 }
 
 void display(int *M, int Mrows, int Mcolumns)
