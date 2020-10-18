@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-
+//Orden de ejecución de los métodos 
 void enterData();
 int* initializeMatrix(int Mrows, int Mcolumns);
 void enterMatrix(int *M, int Mrows, int Mcolumns);
@@ -8,10 +8,12 @@ void multiplyMatrices();
 void displayResult();
 void display(int *M, int Mrows, int Mcolumns);
 void cleanMemory();
-
+//variables a utilizar 
 int *A, *B, *C;
 int Arows, Acolumns, Brows, Bcolumns;
 
+// Método main , retorna 0 al acabar los procedimientos
+//probamos nuestro programa
 int main() {
     enterData();
     multiplyMatrices();
@@ -20,7 +22,7 @@ int main() {
 
     return 0;
 }
-
+// Método de entrada de datos de filas y columnas de la matriz A y B
 void enterData() {
 	do {
 		printf("Ingrese filas y columnas para la matriz A: ");
